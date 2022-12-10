@@ -573,6 +573,12 @@
   font-size: 18px;
   line-height: 24px;
   color: white;
+  transition: 0.3s;
+}
+
+.search-form__field:focus::placeholder {
+  opacity: 35%;
+  transition: 0.3s;
 }
 
 .search-form__wrap input:active, .search-form__wrap input:focus, .search-form__wrap input:hover {

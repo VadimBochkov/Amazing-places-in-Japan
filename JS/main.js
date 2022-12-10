@@ -30,6 +30,8 @@ function openingAndClosingMenus() {
       menuNav.classList.remove('header__nav_active');
     }
   });
+
+  
 }
 
 openingAndClosingMenus();
