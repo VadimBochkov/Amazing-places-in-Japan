@@ -441,14 +441,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    transition: .2s linear;
     padding-bottom: 15px;
-    z-index: 200;
+    z-index: 700;
+    transition: 0.7ms;
   }
 
   .header_active {
-    background: #0E1D28;
-    opacity: .80;
+    background-color: #24292c;
+    opacity: 95%;
+    transition: 0.7ms;
   }
 
   .header__wrapper {
@@ -482,7 +483,7 @@
     text-decoration: none;
 }
 
-.header__link:hover, .header__link:focus, .header__link:active {
+.header__link:hover, .header__link:active {
     opacity: .75;
 }
 
@@ -537,6 +538,7 @@
     font-size: 50px;
     line-height: 60px;
     color: white;
+    position: relative;
 }
 
 .intro__subtitle {
@@ -551,6 +553,7 @@
   border: none;
   margin-bottom: 376px;
 }
+
 .search-form__info {
   display: flex;
   flex-wrap: wrap;
@@ -599,6 +602,176 @@
 .search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active {
   background: #0e66da;
 }
+
+.form-wrapper {
+  display: none;
+}
+
+.form-wrapper_active {
+  display: block;
+  transition: 0.5s;
+  position: fixed;
+  cursor: pointer;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+
+.sign-in__form-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 600;
+}
+
+.sign-in__form {
+  position: relative;
+  top: 150px;
+  width: 450px;
+  height: 500px;
+  background-color: #0E1D28;
+  padding-top: 115px;
+  opacity: 94%;
+  border-radius: 25px;
+  transition: 0.5s;
+  cursor: default;
+  z-index: 600;
+}
+
+.sign-in__form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in__form-close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 15;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.sign-in__form-close:hover {
+  opacity: 80%;
+  transition: .3s;
+}
+
+.sign-in__form-close-line {
+  width: 100%;
+  display: block;
+  height: 1.5px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sign-in__form-close-line:first-child {
+transform: translateY(-50%) rotate(45deg)
+}
+
+.sign-in__form-close-line:last-child {
+transform: translateY(-50%) rotate(-45deg)
+}
+
+.sign-in__form-items {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.sign-in__form-items::after {
+  display: block;
+  content: '';
+  top: 110px;
+  left: 0;
+  width: 300px;
+  border: .8px solid white;
+  background: white;
+  position: absolute;
+}
+
+.sign-in__form-items::before {
+  display: block;
+  content: '';
+  top: 50px;
+  left: 0;
+  width: 300px;
+  border: .8px solid white;
+  background: white;
+  position: absolute;
+}
+
+.sign-in__form-item {
+  outline: none;
+  background: none;
+  border: none;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 13px;
+  color: white;
+  font-size: 20px;
+}
+
+.sign-in__form-item::placeholder {
+  color: white;
+  font-size: 20px;
+}
+
+.sign-in__form-item:focus::placeholder {
+  opacity: 20%;
+}
+
+.sign-in__form-text {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.form-checkbox-wrapper {
+  display: flex;
+  margin-right: 110px;
+  color: white;
+}
+
+.sign-in__form-checkbox {
+  margin-right: 5px;
+}
+
+.sign-in__form-checkbox-text {
+  font-size: 14px;
+}
+
+.sign-in__form-forgot {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sign-in__form-btn {
+  text-transform: uppercase;
+  background: #1B7DFF;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+  border: 0;
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3ms;
+}
+
+.sign-in__form-btn:hover {
+  opacity: 95%;
+  transition: 0.3ms;
+}
+
 
 /* Intro styles end */
 
@@ -1355,7 +1528,7 @@ figure {
     line-height: 48px;
   }
 
-  .header__nav-close {
+  .btn__close {
     display: block;
     width: 40px;
     height: 40px;
@@ -1365,7 +1538,7 @@ figure {
     z-index: 15;
   }
   
-  .header__nav-close-line {
+  .btn__close-line {
     width: 100%;
     display: block;
     height: 1.5px;
@@ -1375,11 +1548,11 @@ figure {
     transform: translateY(-50%);
   }
   
-  .header__nav-close-line:first-child {
+  .btn__close-line:first-child {
   transform: translateY(-50%) rotate(45deg)
   }
   
-  .header__nav-close-line:last-child {
+  .btn__close-line:last-child {
   transform: translateY(-50%) rotate(-45deg)
   }
 

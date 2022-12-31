@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="body">
     <!-- Header start -->
     <header class="header">
         <div class="wrapper">
@@ -34,9 +34,9 @@
                             <a href="#!" class="header__link">Sign in</a>
                         </li>
                     </ul>
-                    <div class="header__nav-close">
-                      <span class="header__nav-close-line"></span>
-                      <span class="header__nav-close-line"></span>
+                    <div class="btn__close header__nav-close">
+                      <span class="btn__close-line header__nav-close-line"></span>
+                      <span class="btn__close-line header__nav-close-line"></span>
                     </div>
                 </nav>
 
@@ -72,6 +72,36 @@
                 </form>
             </div>
         </section>
+        <div class="form-wrapper">
+          <div class="sign-in__form-wrapper">
+            <form action="" class="sign-in__form">
+              <div class="sign-in__form-content">
+                <div class="sign-in__form-close">
+                  <span class="sign-in__form-close-line"></span>
+                  <span class="sign-in__form-close-line"></span>
+                </div>
+                <div class="sign-in__form-items">
+                  <input type="email" class="sign-in__form-item" placeholder="Email ID">  
+                  <input type="password" class="sign-in__form-item" placeholder="Password">              
+                </div>
+                <div class="sign-in__form-text">
+                  <div class="form-checkbox-wrapper">
+                    <input class="sign-in__form-checkbox" type="checkbox">
+                    <p class="sign-in__form-checkbox-text">
+                      Remember me
+                    </p>
+                  </div>
+                  <a class="sign-in__form-forgot" href="#!">
+                    Forgot password?
+                  </a>
+                </div>
+                <button class="sign-in__form-btn">
+                  login
+                </button>
+              </div>
+            </form>  
+          </div>  
+        </div>
         <!--Intro end -->
 
         <!--Benifits start -->
@@ -419,7 +449,7 @@
 
         <!--Video start -->
 
-        <div class="video" id="video">
+        <div class="video" id="videos">
             <div class="video__wrapper">
                 <div class="video__item">
                     <iframe class="video__element" src="https://www.youtube.com/embed/Gb0TQ7VeApY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
