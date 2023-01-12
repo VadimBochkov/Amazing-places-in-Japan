@@ -447,8 +447,8 @@
   }
 
   .header_active {
-    background-color: #24292c;
-    opacity: 95%;
+    background-color: #0E1D28;
+    opacity: 0.9;
     transition: 0.7ms;
   }
 
@@ -637,15 +637,22 @@
   transition: 0.5s;
   cursor: default;
   z-index: 600;
+  margin: 0 10px;
 }
 
 .sign-in__form-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: .3s;
 }
 
-.sign-in__form-close {
+.sign-in__form-content_not-active {
+  display: none;
+  transition: .3s;
+}
+
+.form-close {
   display: block;
   width: 20px;
   height: 20px;
@@ -657,12 +664,12 @@
   cursor: pointer;
 }
 
-.sign-in__form-close:hover {
+.form-close:hover {
   opacity: 80%;
   transition: .3s;
 }
 
-.sign-in__form-close-line {
+.form-close-line {
   width: 100%;
   display: block;
   height: 1.5px;
@@ -672,11 +679,11 @@
   transform: translateY(-50%);
 }
 
-.sign-in__form-close-line:first-child {
+.form-close-line:first-child {
 transform: translateY(-50%) rotate(45deg)
 }
 
-.sign-in__form-close-line:last-child {
+.form-close-line:last-child {
 transform: translateY(-50%) rotate(-45deg)
 }
 
@@ -753,6 +760,10 @@ transform: translateY(-50%) rotate(-45deg)
   font-size: 14px;
 }
 
+.sign-in__form-forgot:hover {
+  cursor: pointer;
+}
+
 .sign-in__form-btn {
   text-transform: uppercase;
   background: #1B7DFF;
@@ -772,6 +783,110 @@ transform: translateY(-50%) rotate(-45deg)
   transition: 0.3ms;
 }
 
+.forgot__form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .3s;
+}
+
+.forgot__form-content_not-active {
+  display: none;
+  transition: .3s;
+}
+
+.forgot__form-arrow {
+  position: absolute;
+  top: 100px;
+  left: 75px;
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.forgot__form-arrow:hover {
+  opacity: 80%;
+  transition: .3s;
+}
+
+.form-arrow-line {
+  width: 13px;
+  display: block;
+  height: 1.5px;
+  background-color: white;
+  position: absolute;
+}
+
+.form-arrow-line:first-child {
+  transform: translateY(-30%) rotate(45deg);
+  bottom: 5px;
+}
+
+.form-arrow-line:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+  top: 5px;
+}
+
+.forgot__form-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  margin: 0 0 45px 0;
+  text-align: center;
+}
+
+.forgot__form-item {
+  outline: none;
+  background: none;
+  border: none;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 60px;
+  color: white;
+  font-size: 20px;
+  position: relative;
+}
+
+.forgot__form-line::after {
+  display: block;
+  content: '';
+  top: 260px;
+  left: 75px;
+  width: 300px;
+  border: .8px solid white;
+  background: white;
+  position: absolute;
+}
+
+.forgot__form-item::placeholder {
+  color: white;
+  font-size: 20px;
+}
+
+.forgot__form-item:focus::placeholder {
+  opacity: 20%;
+}
+
+.forgot__form-btn {
+  text-transform: uppercase;
+  background: #1B7DFF;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+  border: 0;
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3ms;
+}
+
+.forgot__form-btn:hover {
+  opacity: 95%;
+  transition: 0.3ms;
+}
 
 /* Intro styles end */
 
@@ -1815,6 +1930,77 @@ figure {
     right: 15px;
   }
 
+  .sign-in__form {
+    height: 415px;
+    top: 100px;
+    padding-top: 90px;
+  }
+  
+  .sign-in__form-content {
+    margin: 0 10px;
+  }
+
+  .sign-in__form-item {
+    width: 255px;
+  }
+
+  .sign-in__form-items::before {
+    width: 255px;
+  }
+
+  .sign-in__form-items::after {
+    width: 255px;
+  }
+
+  .sign-in__form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-checkbox-wrapper {
+    margin: 0 0 5px 0;
+  }
+
+  .sign-in__form-checkbox-text {
+    font-size: 15px;
+  }
+
+  .sign-in__form-forgot {
+    font-size: 12px;
+  }
+
+  .forgot__form-content {
+    margin: 0 10px;
+  }
+
+  .forgot__form-arrow {
+    left: 25px;
+    top: 25px;
+  }
+
+  .forgot__form-line::after {
+    left: 33px;
+    top: 230px;
+    width: 255px;
+  }
+
+  .forgot__form-item {
+    width: 255px;
+  }
+
+  .sign-in__form-btn {
+    font-size: 22px;
+    width: 255px;
+    height: 45px;
+  }
+
+  .forgot__form-btn {
+    width: 255px;
+    height: 45px;
+  }
+  
+
   .intro {
     padding-top: 135px;
   }
@@ -1967,6 +2153,43 @@ figure {
     font-weight: 400;
     font-size: 10px;
     line-height: 24px;
+  }
+}
+
+@media (min-width:319px) and (max-width: 524px) {
+  .wrapper {
+    padding: 0 5px;
+  }
+
+  .header__logo-pic {
+    width: 50px;
+    height: 20px;
+  }
+
+  .header__burger {
+    width: 25px;
+    height: 18px;
+  }
+
+  .sign-in__form {
+    height: 350px;
+    top: 90px;
+    padding-top: 80px;
+  }
+
+  .sign-in__form-text {
+    margin-bottom: 40px;
+  }
+
+  .forgot__form-line::after {
+    left: 23px;
+    top: 220px;
+    width: 255px;
+  }
+  
+  .footer__nav {
+    width: 90%;
+    justify-content: center;
   }
 }
 

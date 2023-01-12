@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="body">
+<body>
     <!-- Header start -->
     <header class="header">
         <div class="wrapper">
@@ -75,11 +75,11 @@
         <div class="form-wrapper">
           <div class="sign-in__form-wrapper">
             <form action="" class="sign-in__form">
+              <div class="form-close">
+                <span class="form-close-line"></span>
+                <span class="form-close-line"></span>
+              </div>
               <div class="sign-in__form-content">
-                <div class="sign-in__form-close">
-                  <span class="sign-in__form-close-line"></span>
-                  <span class="sign-in__form-close-line"></span>
-                </div>
                 <div class="sign-in__form-items">
                   <input type="email" class="sign-in__form-item" placeholder="Email ID">  
                   <input type="password" class="sign-in__form-item" placeholder="Password">              
@@ -91,16 +91,33 @@
                       Remember me
                     </p>
                   </div>
-                  <a class="sign-in__form-forgot" href="#!">
+                  <div class="sign-in__form-forgot">
                     Forgot password?
-                  </a>
+                  </div>
                 </div>
                 <button class="sign-in__form-btn">
                   login
                 </button>
               </div>
-            </form>  
-          </div>  
+
+              <div class="forgot__form-content forgot__form-content_not-active">
+                <div class="forgot__form-arrow">
+                  <span class="form-arrow-line"></span>
+                  <span class="form-arrow-line"></span>
+                </div>
+                <h2 class="forgot__form-title">
+                  Enter the email and click <br>
+                  "Reset password".
+                </h2>
+                <input type="email" class="forgot__form-item" placeholder="Email ID">
+                <div class="forgot__form-line"></div>
+                <button class="forgot__form-btn">
+                  Reset password
+                </button>
+              </div>
+             
+            </form>
+          </div>
         </div>
         <!--Intro end -->
 
@@ -450,11 +467,11 @@
         <!--Video start -->
 
         <div class="video" id="videos">
-            <div class="video__wrapper">
-                <div class="video__item">
-                    <iframe class="video__element" src="https://www.youtube.com/embed/Gb0TQ7VeApY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
-            </div>
-        </div>
+          <div class="video__wrapper">
+              <div class="video__item">
+                  <iframe class="video__element" src="https://www.youtube.com/embed/Gb0TQ7VeApY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
+          </div>
+      </div>
 
         <!--Video end -->
     </main>
